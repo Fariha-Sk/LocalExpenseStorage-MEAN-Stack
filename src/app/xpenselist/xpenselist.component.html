@@ -1,0 +1,24 @@
+<div class="container shadow-sm p-3 mb-2  rounded">
+    <h4>EXPENSE TRACKER:</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of data;let i=index">
+            <td>{{item.category}}</td>
+            <td>{{item.amount}}</td>
+            <td>{{item.date}}</td>
+            <td> <a [routerLink]="['/dashboard/editxpense',i]" class="text-dark">Edit</a> 
+                / <a (click)="deleteUser(i)" class="text-danger">Delete</a> </td>
+        </tr>
+    </tbody>
+</table>
+   </div>
+
+
